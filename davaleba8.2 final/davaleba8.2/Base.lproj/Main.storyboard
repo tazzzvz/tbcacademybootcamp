@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="davaleba8_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FN-SL-OnC">
+                                <rect key="frame" x="157" y="194" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="g7v-va-RqN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQZ-M8-kGK">
+                                <rect key="frame" x="157" y="258" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kbr-Be-MWo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rl-JU-EHH">
+                                <rect key="frame" x="183.5" y="347" width="47" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXP-wJ-ijW"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rsz_1rsz_fb" translatesAutoresizingMaskIntoConstraints="NO" id="Vd7-uo-NIj">
+                                <rect key="frame" x="182" y="45" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RGM-Zk-ym1"/>
+                                    <constraint firstAttribute="width" constant="50" id="WOb-UR-lv1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oQZ-M8-kGK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Vq-O8-nhY"/>
+                            <constraint firstItem="oQZ-M8-kGK" firstAttribute="top" secondItem="8FN-SL-OnC" secondAttribute="bottom" constant="30" id="5A8-V7-Ybd"/>
+                            <constraint firstItem="8FN-SL-OnC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="62X-Rq-OF0"/>
+                            <constraint firstItem="8FN-SL-OnC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KEf-6u-h8E"/>
+                            <constraint firstItem="9rl-JU-EHH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mbu-EU-Teh"/>
+                            <constraint firstItem="Vd7-uo-NIj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bii-ka-sVI"/>
+                            <constraint firstItem="9rl-JU-EHH" firstAttribute="top" secondItem="oQZ-M8-kGK" secondAttribute="bottom" constant="55" id="i8w-yY-p0f"/>
+                            <constraint firstItem="Vd7-uo-NIj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="zEx-BL-C0b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textfield1" destination="8FN-SL-OnC" id="J9T-aR-Spp"/>
+                        <outlet property="textfield2" destination="oQZ-M8-kGK" id="rp4-zv-fcQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rsz_1rsz_fb" width="30" height="30"/>
+    </resources>
+</document>
