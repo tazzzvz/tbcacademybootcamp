@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BiG-DJ-rc0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--პროდუქტის დამატება-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="davalebaq10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="სახელი" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uiv-Zv-AQ9">
+                                <rect key="frame" x="157" y="208" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ne7-Gp-4Ch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="რაოდენობა" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFS-k9-xBX">
+                                <rect key="frame" x="157" y="272" width="100" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ფასი" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPY-g0-fwR">
+                                <rect key="frame" x="157" y="336" width="100" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duI-Fc-32i">
+                                <rect key="frame" x="107" y="519" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="eNe-AA-Omn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="დამატება">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgN-LH-Ese"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cba-mG-Fuv">
+                                <rect key="frame" x="107" y="603" width="200" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SDW-At-VKq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="გამოთვლა">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddo-ey-hEy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="საერთო რაოდენობა : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPj-bX-XP7">
+                                <rect key="frame" x="264" y="120" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8zX-Ep-Xp0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd5-eI-VUh">
+                                <rect key="frame" x="82" y="410" width="250" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="jCy-qs-T85"/>
+                                    <constraint firstAttribute="height" constant="59" id="xTB-7V-mYB"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cl-rY-zS0">
+                                <rect key="frame" x="157.5" y="658" width="99" height="30"/>
+                                <state key="normal" title="გასუფთავება">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9f-Aw-S68"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uiv-Zv-AQ9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="ACY-6u-RSm"/>
+                            <constraint firstItem="5cl-rY-zS0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LT3-Iw-xDL"/>
+                            <constraint firstItem="QFS-k9-xBX" firstAttribute="width" secondItem="uiv-Zv-AQ9" secondAttribute="width" id="Mf3-oL-T4F"/>
+                            <constraint firstItem="tPY-g0-fwR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nb0-tU-OVO"/>
+                            <constraint firstItem="Fd5-eI-VUh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Th7-JA-EOY"/>
+                            <constraint firstItem="cba-mG-Fuv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VgY-Cq-9st"/>
+                            <constraint firstItem="uiv-Zv-AQ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vp2-5T-c3p"/>
+                            <constraint firstItem="QFS-k9-xBX" firstAttribute="top" secondItem="uiv-Zv-AQ9" secondAttribute="bottom" constant="30" id="XCr-iv-gr9"/>
+                            <constraint firstItem="cba-mG-Fuv" firstAttribute="width" secondItem="duI-Fc-32i" secondAttribute="width" id="XjJ-TB-TWc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPj-bX-XP7" secondAttribute="trailing" constant="100" id="Zpy-gy-Y0t"/>
+                            <constraint firstItem="cba-mG-Fuv" firstAttribute="top" secondItem="duI-Fc-32i" secondAttribute="bottom" constant="50" id="bPt-tK-XmN"/>
+                            <constraint firstItem="bPj-bX-XP7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="bex-XU-NeT"/>
+                            <constraint firstItem="5cl-rY-zS0" firstAttribute="top" secondItem="cba-mG-Fuv" secondAttribute="bottom" constant="19" id="cne-8q-33m"/>
+                            <constraint firstItem="tPY-g0-fwR" firstAttribute="top" secondItem="QFS-k9-xBX" secondAttribute="bottom" constant="30" id="dtg-Hm-B5g"/>
+                            <constraint firstItem="duI-Fc-32i" firstAttribute="top" secondItem="Fd5-eI-VUh" secondAttribute="bottom" constant="50" id="fgD-Ox-BdR"/>
+                            <constraint firstItem="QFS-k9-xBX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g1y-rj-BZ8"/>
+                            <constraint firstItem="Fd5-eI-VUh" firstAttribute="top" secondItem="tPY-g0-fwR" secondAttribute="bottom" constant="40" id="r2s-wf-1L5"/>
+                            <constraint firstItem="tPY-g0-fwR" firstAttribute="width" secondItem="QFS-k9-xBX" secondAttribute="width" id="wdF-Zi-cLq"/>
+                            <constraint firstItem="duI-Fc-32i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zIZ-La-nEB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="პროდუქტის დამატება" id="KV1-fF-TaS"/>
+                    <connections>
+                        <outlet property="name" destination="uiv-Zv-AQ9" id="RxA-tZ-scA"/>
+                        <outlet property="picker" destination="Fd5-eI-VUh" id="e18-01-nSx"/>
+                        <outlet property="price" destination="tPY-g0-fwR" id="ptO-VI-L6u"/>
+                        <outlet property="quantity" destination="QFS-k9-xBX" id="N0L-DU-m5O"/>
+                        <outlet property="quantitydisplay" destination="bPj-bX-XP7" id="9xH-sI-dXg"/>
+                        <segue destination="aYf-i2-XvH" kind="push" identifier="segue" id="SCg-t1-Zxh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
+        </scene>
+        <!--დამატებული პროდუქტების  დეტალები-->
+        <scene sceneID="bJu-A3-lf8">
+            <objects>
+                <viewController id="aYf-i2-XvH" customClass="secondViewController" customModule="davalebaq10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JAX-ri-wqh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-Ux-BeA">
+                                <rect key="frame" x="107" y="188" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="F8V-r0-Jqh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI7-wi-E3t">
+                                <rect key="frame" x="107" y="358.5" width="200" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SI7-wi-E3t" firstAttribute="top" secondItem="ysP-Ux-BeA" secondAttribute="bottom" constant="150" id="GS8-Z1-hUO"/>
+                            <constraint firstItem="ysP-Ux-BeA" firstAttribute="centerX" secondItem="JAX-ri-wqh" secondAttribute="centerX" id="OhK-wH-KM2"/>
+                            <constraint firstItem="SI7-wi-E3t" firstAttribute="centerX" secondItem="JAX-ri-wqh" secondAttribute="centerX" id="QeD-eX-gYc"/>
+                            <constraint firstItem="ysP-Ux-BeA" firstAttribute="top" secondItem="KQK-MS-9pW" secondAttribute="top" constant="100" id="fSF-h2-AtM"/>
+                            <constraint firstItem="SI7-wi-E3t" firstAttribute="width" secondItem="ysP-Ux-BeA" secondAttribute="width" id="vfn-79-aHw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KQK-MS-9pW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="დამატებული პროდუქტების  დეტალები" id="i6U-3U-NLH"/>
+                    <connections>
+                        <outlet property="price" destination="ysP-Ux-BeA" id="6HM-PZ-yiJ"/>
+                        <outlet property="weight" destination="SI7-wi-E3t" id="ni2-DO-lfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nyv-oB-gYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2166.666666666667" y="111.83035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lyd-cg-uvi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BiG-DJ-rc0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ugT-c6-I0y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xEY-Ws-ElK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlQ-Cr-qMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+</document>
