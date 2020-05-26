@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HkL-uU-zsK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notificanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vs" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-Bt-ukL">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="20Z-xn-g19"/>
+                                    <constraint firstAttribute="width" constant="240" id="DTe-5G-LFD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-9f-tSt">
+                                <rect key="frame" x="107" y="556" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7jm-qB-KRZ"/>
+                                    <constraint firstAttribute="width" constant="200" id="fyO-gD-Xoa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VD6-hu-5Jm">
+                                <rect key="frame" x="107" y="658" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dAg-9u-O6i"/>
+                                </constraints>
+                                <state key="normal" title="Choose Your Platform"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="liO-g4-2TE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VD6-hu-5Jm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1HO-Bh-gGM"/>
+                            <constraint firstItem="OrN-9f-tSt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UjV-ml-FS4"/>
+                            <constraint firstItem="iPM-Bt-ukL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YN8-xP-fLu"/>
+                            <constraint firstItem="OrN-9f-tSt" firstAttribute="top" secondItem="iPM-Bt-ukL" secondAttribute="bottom" constant="44" id="cFS-7V-2jU"/>
+                            <constraint firstItem="iPM-Bt-ukL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fUb-fy-u4n"/>
+                            <constraint firstItem="VD6-hu-5Jm" firstAttribute="top" secondItem="OrN-9f-tSt" secondAttribute="bottom" constant="42" id="m4G-UT-EEk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Bf-ml-t8k"/>
+                    <connections>
+                        <outlet property="iosVsAndroid" destination="iPM-Bt-ukL" id="lZu-eF-P4R"/>
+                        <outlet property="textLabel" destination="OrN-9f-tSt" id="PI8-fq-U9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="mAr-Dg-53t">
+            <objects>
+                <viewController storyboardIdentifier="secondVc" id="rfK-C7-qRE" customClass="SecondViewController" customModule="Notificanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74s-dH-kec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iOS" translatesAutoresizingMaskIntoConstraints="NO" id="nTs-aV-AfV">
+                                <rect key="frame" x="87" y="184" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="andorid" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-G6-GlS">
+                                <rect key="frame" x="87" y="411" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="31r-Ux-aNG"/>
+                    </view>
+                    <connections>
+                        <outlet property="androidImage" destination="VOy-G6-GlS" id="DTM-iW-AOi"/>
+                        <outlet property="iosImage" destination="nTs-aV-AfV" id="VYO-40-0cz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3m-Tz-8ZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.1159420289857" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l2E-9x-PgE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HkL-uU-zsK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bzD-jC-mTM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ePe-U3-Kxh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8S-gH-ySq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Vs" width="275" height="183"/>
+        <image name="andorid" width="1200" height="1408"/>
+        <image name="iOS" width="500" height="500"/>
+    </resources>
+</document>
